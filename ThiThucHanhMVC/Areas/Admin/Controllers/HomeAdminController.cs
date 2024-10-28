@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ThiThucHanhMVC.Models;
+using ThiThucHanhMVC.Models.Authentication;
 using ThiThucHanhMVC.ViewModels;
 using X.PagedList;
 
@@ -13,6 +14,8 @@ namespace ThiThucHanhMVC.Areas.Admin.Controllers
     public class HomeAdminController : Controller
     {
         QlbanRauCuContext db =new QlbanRauCuContext();
+
+        [Authentication]
         [Route("")]
         [Route("index")]
         public IActionResult Index()
