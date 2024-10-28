@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<TLoaiRauCu>
+
+<div class="row justify-content-center">
+    <div class="col-md-10 mb-5 text-center">
+        <ul class="product-category">
+            @foreach(var item in Model)
+            {
+                <li><a asp-controller="Home" asp-action="SanPhamTheoLoai" asp-route-maloai="@item.MaLoaiRauCu" >@item.LoaiRauCu</a></li>
+            }
+            
+        </ul>
+    </div>
+</div>

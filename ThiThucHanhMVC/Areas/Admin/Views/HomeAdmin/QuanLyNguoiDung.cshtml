@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ThiThucHanhMVC.Models.TUser>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "QuanLyNguoiDung";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>QuanLyNguoiDung</h1>
+
+<p>
+    <a asp-action="ThemTaiKhoan">Tạo tài khoản</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tài khoản
+            </th><th>
+                Mật khẩu
+            </th>
+            <th>
+                Loại tài khoản
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td><td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.LoaiUser)
+            </td>
+            <td>
+                <a asp-action="SuaTaiKhoan" asp-route-maTaiKhoan="@item.Username">Edit</a> |
+                @* <a asp-action="Details" asp-route-maTaiKhoan="@item.Username">Details</a> | *@
+                <a asp-action="XoaTaiKhoan" asp-route-maTaiKhoan="@item.Username">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

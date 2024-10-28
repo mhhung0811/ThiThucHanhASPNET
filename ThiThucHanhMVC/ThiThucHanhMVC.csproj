@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\LayoutVege\css\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\css\bootstrap\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\css\css\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\css\css\mixins\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\fonts\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\fonts\flaticon\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\fonts\flaticon\font\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\fonts\ionicons\fonts\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\images\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\js\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\scss\.DS_Store" />
+    <None Include="wwwroot\LayoutVege\scss\bootstrap\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
+    <PackageReference Include="X.PagedList" Version="10.5.7" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="10.5.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
+</Project>
